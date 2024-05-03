@@ -1,0 +1,141 @@
+h1 {
+    font-size: 70px;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    color: whitesmoke;
+}
+
+h2 {
+    font-size: 50px;
+    color: rgb(175, 190, 1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-color: #333;
+}
+
+body {
+    background-color: rgb(105, 100, 128);
+    margin: 0px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+    background-color: rgb(16, 1, 190);
+    margin: 30px;
+    padding: 20px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(2, 0, 121);
+}
+
+p {
+    font-size: 40px;
+    padding: 10px;
+    color: rgb(175, 190, 1);
+}
+
+video {
+    margin: auto;
+}
+
+img{
+    width: 50vw;
+    margin: auto;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(2, 0, 121)
+}
+
+table, tr, td {
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(2, 0, 121);
+    font-size: 40px;
+    padding: 10px;
+    background-color: rgb(16, 1, 190);
+    color: rgb(175, 190, 1);
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.navbar {
+    background-color: #3f3f3f;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.navbar-menu li a {
+    color: whitesmoke;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    font-size: 40px;
+}
+
+.navbartoggle {
+    display: block;
+    width: auto;
+    border: none;
+    font-size: 60px;
+    cursor: pointer;
+    background-color: #333;
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+}
+
+#button-toggle {
+    display: none;
+}
+
+#button-toggle:checked ~ .navbar .navbar-menu {
+    display: block;
+}
+
+.clickmap {
+    display: grid;
+    margin: auto;
+    width: 900px;
+
+}
+
+footer {
+    background-color: rgb(16, 1, 190);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    font-size: 40px;
+}
+
+.countriesgrid{
+    background-color: rgb(64, 52, 189);
+    border-color: rgb(42, 40, 129)
+}
+
+label{
+    font-size: 50px;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"]:checked ~ label{
+    color:green;
+}
