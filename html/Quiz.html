@@ -23,35 +23,47 @@
         </header>
         <main>
             <section>
-                <form action="/action_page.php">
-                    <fieldset>
-                        <legend>Quizdata:</legend>
-                        <div>
-                            <h2>What is the capital of Germany?</h2>
-                            <input type="radio" id="berlin" name="tyskland_huvudstad" value="Berlin">  
-                            <label for="berlin">Berlin</label><br>
+                <form action="../html/Quiz.html" method="post"> <!--Här är en form i den fyller du i information genom att clicka på alternativ och skriva svar. När du är klar trycker du på submit-->
+                    <fieldset> <!--Grupperar relaterade element i formen-->
+                        <legend>Quizdata:</legend> <!--Ramar in olika delar av din form, i detta fallet ramar den in hela-->
+                        <div> <!--I denna div finns en fråga och flera radioknappar med labels. Du kan klicka på de olika labels för att välja ett svarsalternativ-->
+                            <h2>Vad är Tysklands huvudstad?</h2>
+                            <input type="radio" id="berlin" name="tyskland_huvudstad" value="Berlin"> <!--Radioknapp med id för att länka labeln till den. Value gör att den sparar "Berlin" ifall du väljer det alternativet-->
+                            <label for="berlin">Berlin</label><br> <!--Denna labeln är länkad til "berlin" och bryter raden så att den slutar-->
                             <input type="radio" id="london" name="tyskland_huvudstad" value="London">  
                             <label for="london">London</label><br>
                             <input type="radio" id="madrid" name="tyskland_huvudstad" value="Madrid">  
                             <label for="madrid">Madrid</label><br>
                         </div>
                         <div>
-                            <h2>What Country in europe has the biggest population?</h2>
+                            <h2>Vilket land i Europa har störst befolkning?</h2>
                             <input type="radio" id="russia" name="europa_befolkning" value="Russia">  
                             <label for="russia">Russia</label><br>
                             <input type="radio" id="germany" name="europa_befolkning" value="Germany">  
                             <label for="germany">Germany</label><br>
                             <input type="radio" id="ukraine" name="europa_befolkning" value="Ukraine">  
                             <label for="ukraine">Ukraine</label><br>
-                            <input type="submit" value="Submit">
                         </div>
-                        <div>
+                        <div> <!--I denna div finns textbox för användarnamn och box för att skriva in ett lösenord samt en textarea för att skriva en egen fråga-->
                             <label for="uname">Användar namn:</label>
-                            <input type="text" id="uname" name="Uname">
+                            <input type="text" id="uname" name="Uname"><br>
+                            <label for="password">Lösenord:</label>
+                            <input type="password" id="password" name="Password"><br>
+                            <label for="textarea">Egen fråga:</label>
+                            <textarea id="textarea" name="Textarea" rows="2" cols="20">Fråga här</textarea><br> <!--Textarean är 2 rader hög och 20 kolumner bred-->
                         </div>
+                        <input type="submit" value="Submit"> <!--Submit knapp för att skicka in all inskriven information-->
                     </fieldset>
                 </form>
             </section>
         </main>
+        <footer>
+            <article>
+                <h2>Kontakt info och källor:</h2>
+            </article>
+            <p>Robin Svensson</p>
+            <p>rosv06002@utb.vaxjo.se</p>
+            <p>https://www.youtube.com/watch?v=Jo_-KoBiBG0</p>
+        </footer>
     </body>
 </html>
