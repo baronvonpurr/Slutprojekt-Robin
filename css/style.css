@@ -1,3 +1,5 @@
+/*-------------------------------------------Generella Saker-------------------------------------------*/
+
 h1 {
     font-size: 70px;
     padding: 10px;
@@ -34,25 +36,6 @@ section {
     border-color: rgb(2, 0, 121);
 }
 
-.countriesgrid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: rgb(64, 52, 189);
-    border-color: rgb(42, 40, 129)
-}
-
-.eugrid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: rgb(64, 52, 189);
-    border-color: rgb(42, 40, 129)
-}
-
-.countriesgrid > section{
-    min-height: min-content;
-    grid-template-rows: 30% 15% 65%;
-}
-
 p {
     font-size: 25px;
     padding: 10px;
@@ -72,20 +55,68 @@ img{
     border-color: rgb(2, 0, 121)
 }
 
-table, tr, td {
+table, tr, td, th {
     border-style: solid;
     border-width: 10px;
     border-color: rgb(2, 0, 121);
     font-size: 40px;
     padding: 10px;
-    background-color: rgb(16, 1, 190);
     color: rgb(175, 190, 1);
 }
 
 table {
     border-collapse: collapse;
     margin: auto;
+    background-color: rgb(16, 1, 190);
 }
+
+
+/*-------------------------------------------Specifika Klasser-------------------------------------------*/
+
+.countriesgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(64, 52, 189);
+    border-color: rgb(42, 40, 129)
+}
+
+.eugrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(64, 52, 189);
+    border-color: rgb(42, 40, 129)
+}
+
+.countriesgrid > section{
+    height: 700px;
+    grid-template-rows: 30% 10% 60%;
+}
+
+.countriesgrid > section > :nth-child(2) {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.countriesgrid > section > :nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+tr:nth-child(odd){
+    background-color: rgb(12, 0, 139);
+}
+
+ol > li {
+    list-style: inside;
+    color: rgb(175, 190, 1);
+    font-size: 40px;
+}
+
+/*-------------------------------------------Navitgations Meny-------------------------------------------*/
 
 .navbar {
     background-color: #5e5b74;
@@ -93,14 +124,14 @@ table {
     align-items: center;
 }
 
-.navbar-menu {
+.navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: none;
 }
 
-.navbar-menu li a {
+ul li a {
     color: rgb(175, 190, 1);
     text-decoration: none;
     display: block;
@@ -124,18 +155,11 @@ table {
     display: none;
 }
 
-#button-toggle:checked ~ .navbar .navbar-menu {
+#button-toggle:checked ~ .navbar ul {
     display: block;
 }
 
-.maplarge, .clickmap{
-    display: none;
-}
-
-.maptiny{
-    width: 400px;
-    min-width: 400px;
-}
+/*-------------------------------------------Image Map-------------------------------------------*/
 
 .clickmap {
     display: grid;
@@ -144,21 +168,59 @@ table {
 
 }
 
+#mapimage{
+    border-width: 0;
+}
+
+#mapborder{
+    width: 900px;
+    padding: 0;
+    margin: auto;
+}
+
+/*-------------------------------------------Footer-------------------------------------------*/
+
 footer {
     background-color: rgb(16, 1, 190);
     width: 100%;
-    height: 200px;
+    height: min-content;
     font-size: 40px;
+    border-top-width: 10px;
+    border-top-style: solid;
+    border-color: rgb(2, 0, 121);
+    margin-top: 30px;
+    padding: 10px;
 }
 
+footer > p{
+    margin: 4px;
+}
+
+/*-------------------------------------------Forms-------------------------------------------*/
+
 label{
-    font-size: 50px;
+    font-size: 40px;
+    color: rgb(175, 190, 1);
 }
 
 input[type="radio"]{
     display: none;
 }
 
-input[type="radio"]:checked ~ label{
-    color:green;
+input[type="radio"]:checked + label {
+    color: green;
+    font-weight: bold;
+}
+
+fieldset{
+    width: 500px;
+    margin: auto;
+    border-radius: 20px;
+    color: rgb(175, 190, 1);
+}
+
+legend{
+    color: rgb(175, 190, 1);
+    font-size: 40px;
+    font-weight: bold;
 }

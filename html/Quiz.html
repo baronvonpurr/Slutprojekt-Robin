@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="sv">
     <head>
         <title>Quiz</title>
         <meta charset="utf-8">
@@ -14,7 +14,7 @@
             <label for="button-toggle" class="navbartoggle">Meny</label>
 
             <nav class="navbar">
-                <ul class="navbar-menu">
+                <ul>
                     <li><a href="../html/Index.html">Startsida</a></li>
                     <li><a href="../html/EU.html">Europa Unionen</a></li>
                     <li><a href="">Quiz</a></li>
@@ -23,15 +23,33 @@
         </header>
         <main>
             <section>
-                <form>
-                    <h2>What is the capital of Germany?</h2>
-                    <input type="radio" id="berlin" name="tyskland_huvudstad" value="Berlin">  
-                    <label for="berlin">Berlin</label><br>
-                    <input type="radio" id="london" name="tyskland_huvudstad" value="London">  
-                    <label for="london">London</label><br>
-                    <input type="radio" id="madrid" name="tyskland_huvudstad" value="Madrid">  
-                    <label for="madrid">Madrid</label><br>
-                    <input type="submit" value="Submit">
+                <form action="/action_page.php">
+                    <fieldset>
+                        <legend>Quizdata:</legend>
+                        <div>
+                            <h2>What is the capital of Germany?</h2>
+                            <input type="radio" id="berlin" name="tyskland_huvudstad" value="Berlin">  
+                            <label for="berlin">Berlin</label><br>
+                            <input type="radio" id="london" name="tyskland_huvudstad" value="London">  
+                            <label for="london">London</label><br>
+                            <input type="radio" id="madrid" name="tyskland_huvudstad" value="Madrid">  
+                            <label for="madrid">Madrid</label><br>
+                        </div>
+                        <div>
+                            <h2>What Country in europe has the biggest population?</h2>
+                            <input type="radio" id="russia" name="europa_befolkning" value="Russia">  
+                            <label for="russia">Russia</label><br>
+                            <input type="radio" id="germany" name="europa_befolkning" value="Germany">  
+                            <label for="germany">Germany</label><br>
+                            <input type="radio" id="ukraine" name="europa_befolkning" value="Ukraine">  
+                            <label for="ukraine">Ukraine</label><br>
+                            <input type="submit" value="Submit">
+                        </div>
+                        <div>
+                            <label for="uname">Användar namn:</label>
+                            <input type="text" id="uname" name="Uname">
+                        </div>
+                    </fieldset>
                 </form>
             </section>
         </main>
