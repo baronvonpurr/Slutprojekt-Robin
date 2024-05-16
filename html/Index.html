@@ -6,14 +6,12 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="../css/style.css">
     </head>
-
     <body> <!--Här står all huvudkoden, saker som kommer synas på webbsidan-->
         <div class="wrapper">
             <header> <!--I header så står titeln och den kollapserbara navigationsmenyn-->
                 <h1>Europas Nationalsånger</h1>
                 <input type="checkbox" id="button-toggle"> <!--Detta är knappen som kollapserar och öppnar navigations menyn, den göms och labeln nedanför används som klick yta istället-->
                 <label for="button-toggle">Meny</label>
-    
                 <nav> <!--Detta är navigations menyn som öppnas och stängs-->
                     <ul>
                         <li><a href="">Startsida</a></li>
@@ -24,8 +22,8 @@
             </header>
             <main> <!--I main står allt innehåll i webbsidan-->
                 <section> <!--Denna sektion inehåller imagemappen som hjälper dig att navigera runt olika sidor-->
-                    <section id="mapborder"> <!--Detta gör så att bilden har en border men som inte räknas som bildens border för att idioten som kodade imagemap tyckte att kartan borde börja där bordern är-->
-                            <img src="../Media/Europe_map900.png" alt="Clickable map" usemap="#workmap" id="mapimage"> <!--Bilden till imagemappen-->
+                    <section id="map-border"> <!--Detta gör så att bilden har en border men som inte räknas som bildens border för att idioten som kodade imagemap tyckte att kartan borde börja där bordern är-->
+                            <img src="../Media/Europe_map900.png" alt="Clickable map" usemap="#workmap" id="map-image"> <!--Bilden till imagemappen-->
                             <map name="workmap"> <!--Kartan där alla koordinater står-->
                             <area shape="rect" coords="56,68,169,163" href="../html/nordeuropa.html"> <!--Här står alla klickytor och deras kordinater-->
                             <area shape="poly" href="../html/nordeuropa.html" coords="392,426 331,337 342,243 408,194 439,90 521,13 549,2 596,11 581,58 601,84 616,153 651,196 617,279 543,306 526,411 429,439 " >

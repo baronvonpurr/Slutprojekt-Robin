@@ -46,7 +46,7 @@ video { /*Gör så att alla videor har automatisk margin*/
     margin: auto;
 }
 
-img{ /*Modifierar image med olika saker så att de till exempel är lika breda som 15% av den synliga bredden på sidan */
+img { /*Modifierar image med olika saker så att de till exempel är lika breda som 15% av den synliga bredden på sidan */
     width: 15vw;
     margin: auto;
     border-style: solid;
@@ -72,44 +72,44 @@ table { /*Kollapsar alla borders så att de sitter ihop när de är jämte varan
 
 /*-------------------------------------------Specifika Klasser-------------------------------------------*/
 
-.wrapper{
+.wrapper {
     display: grid;
 }
 
-.countriesgrid{ /*Gör gridden för alla sektioner på sidorna med länder så att de organiseras i trespalt och alla har 1fraktion(33%) var*/
+.countries-grid { /*Gör gridden för alla sektioner på sidorna med länder så att de organiseras i trespalt och alla har 1fraktion(33%) var*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: rgb(64, 52, 189);
     border-color: rgb(42, 40, 129)
 }
 
-.eugrid{ /*Delar in så att videon och informationen på EU sidan hamnar i tvåspalt*/
+.eu-grid { /*Delar in så att videon och informationen på EU sidan hamnar i tvåspalt*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: rgb(64, 52, 189);
     border-color: rgb(42, 40, 129)
 }
 
-.countriesgrid > section{ /*Ställer in varje individel sektion som inehåller information om länderna så att flaggan, titeln och texten får en passande fördelning*/
+.countries-grid > section { /*Ställer in varje individel sektion som inehåller information om länderna så att flaggan, titeln och texten får en passande fördelning*/
     height: 700px;
     grid-template-rows: 30% 10% 60%;
 }
 
-.countriesgrid > section > :nth-child(2) { /*Ändrar den andra saken i sektionerna om länderna(Rubriken)*/
+.countries-grid > section > :nth-child(2) { /*Ändrar den andra saken i sektionerna om länderna(Rubriken)*/
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.countriesgrid > section > :nth-child(3) { /*Ändrar den tredje saken i sektionerna om länderna(Texten)*/
+.countries-grid > section > :nth-child(3) { /*Ändrar den tredje saken i sektionerna om länderna(Texten)*/
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
 }
 
-tr:nth-child(odd){ /*Gör så att varanan rad i tabellen får en annan färg (zebrastriping)*/
+tr:nth-child(odd) { /*Gör så att varanan rad i tabellen får en annan färg (zebrastriping)*/
     background-color: rgb(12, 0, 139);
 }
 
@@ -119,7 +119,7 @@ ol > li { /*Ändrar varje li i den ordnade listan*/
     font-size: 40px;
 }
 
-#lista{ /*Modiferar hela listen så att den blir horisontelt centrerad och bredden blir 30% av förälderns bredd*/
+#lista { /*Modiferar hela listen så att den blir horisontelt centrerad och bredden blir 30% av förälderns bredd*/
     width: 30em;
     margin-left: auto;
     margin-right: auto;
@@ -168,31 +168,31 @@ header > label { /*Modifierar designen på meny labeln till menyknappen. Bland a
 }
 
 /*Alla LoVe Focus HAte. Används bara till globala navigations menyn på denna webbsida*/
-a:link{
+a:link {
     color: rgb(175, 190, 1);
 }
 
-a:visited{
+a:visited {
     color: rgb(190, 155, 1)
 }
 
-a:focus, a:hover{
+a:focus, a:hover {
     color: rgb(131, 143, 0);
 }
 
-a:active{
+a:active {
     color: rgb(100, 109, 0);
 }
 
 /*-------------------------------------------Image Map-------------------------------------------*/
 
-#mapimage{/*tar bort bordern och ställer en fast på imagemappen så att de inte påverkar klickytan.*/
+#map-image {/*tar bort bordern och ställer en fast på imagemappen så att de inte påverkar klickytan.*/
     border-width: 0;
     margin: auto;
     width: 900px;
 }
 
-#mapborder{ /*Sätter stilen på sektinen som används för att ge imagemappen en border utan att störa klickytan*/
+#map-border { /*Sätter stilen på sektinen som används för att ge imagemappen en border utan att störa klickytan*/
     width: 900px;
     padding: 0;
     margin: auto;
@@ -200,16 +200,16 @@ a:active{
 
 /*-------------------------------------------Forms-------------------------------------------*/
 
-form > fieldset > div > label{ /*Ställer in stilen på alla labels i forms*/
+form > fieldset > div > label { /*Ställer in stilen på alla labels i forms*/
     font-size: 40px;
     color: rgb(175, 190, 1);
 }
 
-input[type="radio"]{ /*Tar bort radioknapparna eftersom man ska clicka på label istället*/
+input[type="radio"] { /*Tar bort radioknapparna eftersom man ska clicka på label istället*/
     display: none;
 }
 
-input[type="radio"] ~ label{ /*Sätter så att när du har musen på radioknapparnas labels så ändras gen till handen*/
+input[type="radio"] ~ label { /*Sätter så att när du har musen på radioknapparnas labels så ändras gen till handen*/
     cursor: pointer;
 }
 
@@ -218,7 +218,7 @@ input[type="radio"]:checked + label { /*När en radioknapp är checkad ändras d
     font-weight: bold;
 }
 
-fieldset{ /*Modifierar fieldset*/
+fieldset { /*Modifierar fieldset*/
     width: 500px;
     margin: auto;
     border-radius: 20px;
@@ -226,7 +226,7 @@ fieldset{ /*Modifierar fieldset*/
     background-color: rgb(15, 1, 163);
 }
 
-legend{ /*Modifies the legend*/
+legend { /*Modifierar legend*/
     color: rgb(175, 190, 1);
     font-size: 40px;
     font-weight: bold;
@@ -246,6 +246,6 @@ footer { /*Modifierar footer så att det bara har en border på övre sidan och 
     padding: 10px;
 }
 
-footer > p{ /*Ger texten i footern en liten margin*/
+footer > p { /*Ger texten i footern en liten margin*/
     margin: 4px;
 }
