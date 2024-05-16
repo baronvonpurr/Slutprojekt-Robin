@@ -72,6 +72,10 @@ table { /*Kollapsar alla borders så att de sitter ihop när de är jämte varan
 
 /*-------------------------------------------Specifika Klasser-------------------------------------------*/
 
+.wrapper{
+    display: grid;
+}
+
 .countriesgrid{ /*Gör gridden för alla sektioner på sidorna med länder så att de organiseras i trespalt och alla har 1fraktion(33%) var*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -123,12 +127,12 @@ ol > li { /*Ändrar varje li i den ordnade listan*/
 
 /*-------------------------------------------Navitgations Meny-------------------------------------------*/
 
-.navbar { /*Modifierar navigations menyn smått*/
+nav { /*Modifierar navigations menyn smått*/
     background-color: #5e5b74;
     align-items: center;
 }
 
-.navbar ul { /*Tar bort punkerna i varje list element och gömmer menyn*/
+nav ul { /*Tar bort punkerna i varje list element och gömmer menyn*/
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -143,7 +147,7 @@ ul li a { /*Modifierar listan i den kollapserbara menyn*/
     font-size: 40px;
 }
 
-.navbartoggle { /*Modifierar designen på meny labeln till menyknappen. Bland annat så att muspekaren ändras när du har musen över den*/
+header > label { /*Modifierar designen på meny labeln till menyknappen. Bland annat så att muspekaren ändras när du har musen över den*/
     display: block;
     width: auto;
     border: none;
@@ -159,7 +163,7 @@ ul li a { /*Modifierar listan i den kollapserbara menyn*/
     display: none;
 }
 
-#button-toggle:checked ~ .navbar ul { /*Gör så att om boxen är fylld så visas navigations menyn*/
+#button-toggle:checked ~ nav ul { /*Gör så att om boxen är fylld så visas navigations menyn*/
     display: block;
 }
 
@@ -182,13 +186,10 @@ a:active{
 
 /*-------------------------------------------Image Map-------------------------------------------*/
 
-.clickmap { /*Sätter en fast storlek på bilden för att image map är beroende av det*/
+#mapimage{/*tar bort bordern och ställer en fast på imagemappen så att de inte påverkar klickytan.*/
+    border-width: 0;
     margin: auto;
     width: 900px;
-}
-
-#mapimage{/*tar bort bordern så på imagemappen så att den inte flyttar klickytan*/
-    border-width: 0;
 }
 
 #mapborder{ /*Sätter stilen på sektinen som används för att ge imagemappen en border utan att störa klickytan*/
@@ -199,7 +200,7 @@ a:active{
 
 /*-------------------------------------------Forms-------------------------------------------*/
 
-label{ /*Ställer in stilen på alla labels i forms*/
+form > fieldset > div > label{ /*Ställer in stilen på alla labels i forms*/
     font-size: 40px;
     color: rgb(175, 190, 1);
 }
