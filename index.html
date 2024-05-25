@@ -4,7 +4,7 @@
     <head> <!--head, här sätts information som titel, charset och länking till css-->
         <title>Europas Nationalsånger</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body> <!--Här står all huvudkoden, saker som kommer synas på webbsidan-->
         <div class="wrapper">
@@ -25,13 +25,13 @@
                     <section id="map-border"> <!--Detta gör så att bilden har en border men som inte räknas som bildens border för att idioten som kodade imagemap tyckte att kartan borde börja där bordern är-->
                             <img src="../Media/Europe_map900.png" alt="Clickable map" usemap="#workmap" id="map-image"> <!--Bilden till imagemappen-->
                             <map name="workmap"> <!--Kartan där alla koordinater står-->
-                            <area shape="rect" coords="56,68,169,163" href="../html/nordeuropa.html"> <!--Här står alla klickytor och deras kordinater-->
-                            <area shape="poly" href="../html/nordeuropa.html" coords="392,426 331,337 342,243 408,194 439,90 521,13 549,2 596,11 581,58 601,84 616,153 651,196 617,279 543,306 526,411 429,439 " >
-                            <area shape="poly" href="../html/östeuropa.html" coords="900,590 817,625 738,614 721,621 681,555 612,573 624,510 597,423 549,427 559,308 621,280 653,195 618,150 603,83 582,58 597,13 696,24 727,0 900,0 900,0 " >
-                            <area shape="poly" href="../html/centraleuropa.html" coords="472,630 419,626 360,646 342,640 378,572 355,566 347,503 368,461 398,453 386,427 408,432 435,444 457,433 528,420 549,428 596,424 623,511 609,574 618,577 592,626 542,641 515,620 " >
-                            <area shape="poly" href="../html/västeuropa.html" coords="278,268 175,328 93,458 121,484 163,526 172,583 214,626 202,693 287,728 402,763 410,720 366,698 357,647 339,640 376,574 354,566 346,502 368,459 396,452 " >
-                            <area shape="poly" href="../html/balkaneuropa.html" coords="736,700 738,616 720,623 680,556 621,576 592,629 542,642 515,621 472,631 474,656 474,685 605,787 618,756 674,728 695,731 715,708 " >
-                            <area shape="poly" href="../html/sydeuropa.html" coords="199,693 72,650 19,828 97,863 503,899 726,891 899,852 899,667 857,655 763,713 737,703 715,710 695,734 675,729 620,757 605,788 473,685 470,631 419,628 359,647 367,697 411,720 403,764 287,729 " >
+                            <area shape="rect" alt="Nordeuropa" coords="56,68,169,163" href="../html/nordeuropa.html"> <!--Här står alla klickytor och deras kordinater-->
+                            <area shape="poly" alt="Nordeuropa" href="../html/nordeuropa.html" coords="392,426,331,337,342,243,408,194,439,90,521,13,549,2,596,11,581,58,601,84,616,153,651,196,617,279,543,306,526,411,429,439" >
+                            <area shape="poly" alt="Östeuropa" href="../html/östeuropa.html" coords="900,590,817,625,738,614,721,621,681,555,612,573,624,510,597,423,549,427,559,308,621,280,653,195,618,150,603,83,582,58,597,13,696,24,727,0,900,0,900,0" >
+                            <area shape="poly" alt="Centraleuropa" href="../html/centraleuropa.html" coords="472,630,419,626,360,646,342,640,378,572,355,566,347,503,368,461,398,453,386,427,408,432,435,444,457,433,528,420,549,428,596,424,623,511,609,574,618,577,592,626,542,641,515,620" >
+                            <area shape="poly" alt="Västeuropa" href="../html/västeuropa.html" coords="278,268,175,328,93,458,121,484,163,526,172,583,214,626,202,693,287,728,402,763,410,720,366,698,357,647,339,640,376,574,354,566,346,502,368,459,396,452" >
+                            <area shape="poly" alt="Balkaneuropa" href="../html/balkaneuropa.html" coords="736,700,738,616,720,623,680,556,621,576,592,629,542,642,515,621,472,631,474,656,474,685,605,787,618,756,674,728,695,731,715,708" >
+                            <area shape="poly" alt="Sydeuropa" href="../html/sydeuropa.html" coords="199,69,372,650,19,828,97,863,503,899,726,891,899,852,899,667,857,655,763,713,737,703,715,710,695,734,675,729,620,757,605,788,473,685,470,631,419,628,359,647,367,697,411,720,403,764,287,729" >
                         </map>
                     </section>
                 </section>

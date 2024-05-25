@@ -14,7 +14,7 @@
                 <label for="button-toggle">Meny</label>
                 <nav>
                     <ul>
-                        <li><a href="../html/Index.html">Startsida</a></li>
+                        <li><a href="../index.html">Startsida</a></li>
                         <li><a href="../html/EU.html">Europa Unionen</a></li>
                         <li><a href="">Quiz</a></li>
                     </ul>
@@ -22,19 +22,17 @@
             </header>
             <main>
                 <section>
-                    <form action="../html/Quiz.html" method="post"> <!--Här är en form i den fyller du i information genom att clicka på alternativ och skriva svar. När du är klar trycker du på submit-->
+                    <form action="../html/Quiz.html" method="post"> <!--Här är en form i den fyller du i information genom att clicka på alternativ och skriva svar. När du är klar trycker du på submit. Den sparar datan genom post vilket skickar den till ett dokument-->
                         <fieldset> <!--Grupperar relaterade element i formen-->
                             <legend>Quizdata:</legend> <!--Ramar in olika delar av din form, i detta fallet ramar den in hela-->
-                            <div> <!--I denna div finns en fråga och flera radioknappar med labels. Du kan klicka på de olika labels för att välja ett svarsalternativ-->
-                                <h2>Vad är Tysklands huvudstad?</h2>
+                             <!--Nedanför finns flera frågor och flera radioknappar med labels länkade till dom genom id. Du kan klicka på de olika labels eller radioknapparna för att välja ett svarsalternativ-->
+                                <h2>Vad är Tysklands huvudstad?</h2> <!--Rubekn här ställer frågan -->
                                 <input type="radio" id="berlin" name="tyskland_huvudstad" value="Berlin"> <!--Radioknapp med id för att länka labeln till den. Value gör att den sparar "Berlin" ifall du väljer det alternativet-->
-                                <label for="berlin">Berlin</label><br> <!--Denna labeln är länkad til "berlin" och bryter raden så att den slutar-->
+                                <label for="berlin">Berlin</label><br> <!--Denna labeln är länkad till föremålet med id "berlin" och br bryter raden så att den slutar-->
                                 <input type="radio" id="london" name="tyskland_huvudstad" value="London">  
                                 <label for="london">London</label><br>
                                 <input type="radio" id="madrid" name="tyskland_huvudstad" value="Madrid">  
                                 <label for="madrid">Madrid</label><br>
-                            </div>
-                            <div>
                                 <h2>Vilket land i Europa har störst befolkning?</h2>
                                 <input type="radio" id="russia" name="europa_befolkning" value="Russia">  
                                 <label for="russia">Russia</label><br>
@@ -42,24 +40,25 @@
                                 <label for="germany">Germany</label><br>
                                 <input type="radio" id="ukraine" name="europa_befolkning" value="Ukraine">  
                                 <label for="ukraine">Ukraine</label><br>
-                            </div>
-                            <div> <!--I denna div finns textbox för användarnamn och box för att skriva in ett lösenord samt en textarea för att skriva en egen fråga-->
+                                <h2>Vilket av följande är du?</h2>
+                                <input type="checkbox" id="man" name="Man">
+                                <label for="man">Jag är man</label><br>
+                                <input type="checkbox" id="program" name="Program">
+                                <label for="program">Jag är programmerare</label><br>
+                                <!--Nedanför finns textbox för användarnamn och box för att skriva in ett lösenord samt en textarea för att skriva en egen fråga-->
                                 <label for="uname">Användar namn:</label>
                                 <input type="text" id="uname" name="Uname"><br>
                                 <label for="password">Lösenord:</label>
                                 <input type="password" id="password" name="Password"><br>
                                 <label for="textarea">Egen fråga:</label>
                                 <textarea id="textarea" name="Textarea" rows="2" cols="20">Fråga här</textarea><br> <!--Textarean är 2 rader hög och 20 kolumner bred-->
-                            </div>
                             <input type="submit" value="Submit"> <!--Submit knapp för att skicka in all inskriven information-->
                         </fieldset>
                     </form>
                 </section>
             </main>
             <footer>
-                <article>
-                    <h2>Kontakt info:</h2>
-                </article>
+                <p>Kontakt info:</p>
                 <p>Robin Svensson</p>
                 <p>rosv06002@utb.vaxjo.se</p>
             </footer>

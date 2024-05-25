@@ -1,5 +1,15 @@
 /*-------------------------------------------Generella Saker-------------------------------------------*/
 
+.wrapper {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    max-width: 97vw;
+}
+
 h1 { /*Ändrar text storleken, ändrar färg och centrerar texten. Tar bort margin och lägger till padding*/
     font-size: 70px;
     padding: 10px;
@@ -15,13 +25,19 @@ h2 { /*Modifierar alla h2 element med saker som textstorlek, färg och fontfamil
 }
 
 header { /*Design av headern, höjden är det minimala som behövs för att få plats med allt innehåll*/
+    grid-area: header;
     background-color: #555268;
     height: min-content;
+    width: 97vw;
 }
 
 body { /*Tar bot margin på body och sätter ny färg*/
     background-color: rgb(105, 100, 128);
     margin: 0px;
+}
+
+main {
+    grid-area: main;
 }
 
 section { /*Ger alla seketioner en gridd och border samt andra modifieringar. Bordern blir rundad*/
@@ -44,6 +60,8 @@ p { /*Modifierar alla paragrafer*/
 
 video { /*Gör så att alla videor har automatisk margin*/
     margin: auto;
+    width: 640px;
+    height: 480px;
 }
 
 img { /*Modifierar image med olika saker så att de till exempel är lika breda som 15% av den synliga bredden på sidan */
@@ -70,11 +88,20 @@ table { /*Kollapsar alla borders så att de sitter ihop när de är jämte varan
     background-color: rgb(16, 1, 190);
 }
 
-/*-------------------------------------------Specifika Klasser-------------------------------------------*/
-
-.wrapper {
-    display: grid;
+footer { /*Modifierar footer så att det bara har en border på övre sidan och andra saker*/
+    grid-area: footer;
+    background-color: rgb(16, 1, 190);
+    width: 100%;
+    height: min-content;
+    font-size: 40px;
+    border-top-width: 10px;
+    border-top-style: solid;
+    border-color: rgb(2, 0, 121);
+    margin-top: 30px;
+    padding: 10px;
 }
+
+/*-------------------------------------------Specifika Klasser-------------------------------------------*/
 
 .countries-grid { /*Gör gridden för alla sektioner på sidorna med länder så att de organiseras i trespalt och alla har 1fraktion(33%) var*/
     display: grid;
@@ -90,20 +117,19 @@ table { /*Kollapsar alla borders så att de sitter ihop när de är jämte varan
     border-color: rgb(42, 40, 129)
 }
 
-.countries-grid > section { /*Ställer in varje individel sektion som inehåller information om länderna så att flaggan, titeln och texten får en passande fördelning*/
-    height: 700px;
+.countries-grid > figure { /*Ställer in varje individel sektion som inehåller information om länderna så att flaggan, titeln och texten får en passande fördelning*/
     grid-template-rows: 30% 10% 60%;
 }
 
-.countries-grid > section > :nth-child(2) { /*Ändrar den andra saken i sektionerna om länderna(Rubriken)*/
+.countries-grid > figure > h2 { /*Ändrar den andra saken i sektionerna om länderna(Rubriken)*/
     margin: 0;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
 }
 
-.countries-grid > section > :nth-child(3) { /*Ändrar den tredje saken i sektionerna om länderna(Texten)*/
-    display: flex;
+.countries-grid > figure > figcaption { /*Ändrar den tredje saken i sektionerna om länderna(Texten)*/
+    display: grid;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -125,6 +151,10 @@ ol > li { /*Ändrar varje li i den ordnade listan*/
     margin-right: auto;
 }
 
+footer > p { /*Ger texten i footern en liten margin*/
+    margin: 4px;
+}
+
 /*-------------------------------------------Navitgations Meny-------------------------------------------*/
 
 nav { /*Modifierar navigations menyn smått*/
@@ -139,10 +169,17 @@ nav ul { /*Tar bort punkerna i varje list element och gömmer menyn*/
     display: none;
 }
 
-ul li a { /*Modifierar listan i den kollapserbara menyn*/
+ul li { /*Modifierar listan i den kollapserbara menyn*/
     color: rgb(175, 190, 1);
     text-decoration: none;
     display: block;
+    padding: 10px 20px;
+    font-size: 40px;
+}
+
+a {
+    color: rgb(175, 190, 1);
+    text-decoration: none;
     padding: 10px 20px;
     font-size: 40px;
 }
@@ -200,13 +237,9 @@ a:active {
 
 /*-------------------------------------------Forms-------------------------------------------*/
 
-form > fieldset > div > label { /*Ställer in stilen på alla labels i forms*/
+form > fieldset > label { /*Ställer in stilen på alla labels i forms*/
     font-size: 40px;
     color: rgb(175, 190, 1);
-}
-
-input[type="radio"] { /*Tar bort radioknapparna eftersom man ska clicka på label istället*/
-    display: none;
 }
 
 input[type="radio"] ~ label { /*Sätter så att när du har musen på radioknapparnas labels så ändras gen till handen*/
@@ -230,22 +263,4 @@ legend { /*Modifierar legend*/
     color: rgb(175, 190, 1);
     font-size: 40px;
     font-weight: bold;
-}
-
-/*-------------------------------------------Footer-------------------------------------------*/
-
-footer { /*Modifierar footer så att det bara har en border på övre sidan och andra saker*/
-    background-color: rgb(16, 1, 190);
-    width: 100%;
-    height: min-content;
-    font-size: 40px;
-    border-top-width: 10px;
-    border-top-style: solid;
-    border-color: rgb(2, 0, 121);
-    margin-top: 30px;
-    padding: 10px;
-}
-
-footer > p { /*Ger texten i footern en liten margin*/
-    margin: 4px;
 }
