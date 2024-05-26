@@ -26,14 +26,14 @@
                         <fieldset> <!--Grupperar relaterade element i formen-->
                             <legend>Quizdata:</legend> <!--Ramar in olika delar av din form, i detta fallet ramar den in hela-->
                              <!--Nedanför finns flera frågor och flera radioknappar med labels länkade till dom genom id. Du kan klicka på de olika labels eller radioknapparna för att välja ett svarsalternativ-->
-                                <h2>Vad är Tysklands huvudstad?</h2> <!--Rubekn här ställer frågan -->
+                                <h2>Vad är Tysklands huvudstad?</h2> <!--Rubriken här ställer frågan -->
                                 <input type="radio" id="berlin" name="tyskland_huvudstad" value="Berlin"> <!--Radioknapp med id för att länka labeln till den. Value gör att den sparar "Berlin" ifall du väljer det alternativet-->
                                 <label for="berlin">Berlin</label><br> <!--Denna labeln är länkad till föremålet med id "berlin" och br bryter raden så att den slutar-->
                                 <input type="radio" id="london" name="tyskland_huvudstad" value="London">  
                                 <label for="london">London</label><br>
                                 <input type="radio" id="madrid" name="tyskland_huvudstad" value="Madrid">  
                                 <label for="madrid">Madrid</label><br>
-                                <h2>Vilket land i Europa har störst befolkning?</h2>
+                                <h2>Vilket land i Europa har störst befolkning?</h2> <!--Här ställs en annan fråga-->
                                 <input type="radio" id="russia" name="europa_befolkning" value="Russia">  
                                 <label for="russia">Russia</label><br>
                                 <input type="radio" id="germany" name="europa_befolkning" value="Germany">  
@@ -41,17 +41,17 @@
                                 <input type="radio" id="ukraine" name="europa_befolkning" value="Ukraine">  
                                 <label for="ukraine">Ukraine</label><br>
                                 <h2>Vilket av följande är du?</h2>
-                                <input type="checkbox" id="man" name="Man">
+                                <input type="checkbox" id="man" name="Man"> <!--Här används istället en checkbox, checkboxar låter dig fylla i flera alternativ-->
                                 <label for="man">Jag är man</label><br>
                                 <input type="checkbox" id="program" name="Program">
                                 <label for="program">Jag är programmerare</label><br>
                                 <!--Nedanför finns textbox för användarnamn och box för att skriva in ett lösenord samt en textarea för att skriva en egen fråga-->
                                 <label for="uname">Användar namn:</label>
-                                <input type="text" id="uname" name="Uname"><br>
+                                <input type="text" id="uname" name="Uname"><br> <!--I en text som dänna kan du skriva in text. Här ska du skriva in ditt användarnamn-->
                                 <label for="password">Lösenord:</label>
-                                <input type="password" id="password" name="Password"><br>
+                                <input type="password" id="password" name="Password"><br> <!--I password skriver du in ditt lösenord. Password gör så att man inte kan se tecknen som skrivs-->
                                 <label for="textarea">Egen fråga:</label>
-                                <textarea id="textarea" name="Textarea" rows="2" cols="20">Fråga här</textarea><br> <!--Textarean är 2 rader hög och 20 kolumner bred-->
+                                <textarea id="textarea" name="Textarea">Fråga här</textarea><br> <!--Textarean används för att skriva in text i en större yta som kan ha flera rader-->
                             <input type="submit" value="Submit"> <!--Submit knapp för att skicka in all inskriven information-->
                         </fieldset>
                     </form>

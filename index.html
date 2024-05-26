@@ -2,20 +2,20 @@
 
 <html lang="sv"> <!-- Sidospråket är svenska-->
     <head> <!--head, här sätts information som titel, charset och länking till css-->
-        <title>Europas Nationalsånger</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="css/style.css">
+        <title>Europas Nationalsånger</title> <!--Sätter titeln altså texten till fliken i fliklistan-->
+        <meta charset="utf-8"> <!--Gör så att sidans karaktär kodning är utf-8-->
+        <link rel="stylesheet" href="css/style.css"> <!--Länkar sidan till CSS dokumentet "style.css"-->
     </head>
     <body> <!--Här står all huvudkoden, saker som kommer synas på webbsidan-->
-        <div class="wrapper">
+        <div class="wrapper"> <!--Gen globala gridden som används på barje sida-->
             <header> <!--I header så står titeln och den kollapserbara navigationsmenyn-->
-                <h1>Europas Nationalsånger</h1>
+                <h1>Europas Nationalsånger</h1> <!--Titeln på den grafiska delen av webbsidan skrivet med den primära headern-->
                 <input type="checkbox" id="button-toggle"> <!--Detta är knappen som kollapserar och öppnar navigations menyn, den göms och labeln nedanför används som klick yta istället-->
-                <label for="button-toggle">Meny</label>
+                <label for="button-toggle">Meny</label> <!--Texten till checkboxen som öppnar och stänger menyn, används som knappen istället för själva checkboxen-->
                 <nav> <!--Detta är navigations menyn som öppnas och stängs-->
-                    <ul>
-                        <li><a href="">Startsida</a></li>
-                        <li><a href="../html/EU.html">Europa Unionen</a></li>
+                    <ul> <!--Detta är den oorganiserade listan med alla länkar i globala navigations menyn-->
+                        <li><a href="">Startsida</a></li> <!--En av länkarna i den globala navigations menyn, denna leder dig ingenstans eftersom du redan är på startsidan-->
+                        <li><a href="../html/EU.html">Europa Unionen</a></li> <!--En av länkarna i den globala navigations menyn, denna leder dig till EU.html vilket är sidan om EU-->
                         <li><a href="../html/Quiz.html">Quiz</a></li>
                     </ul>
                 </nav>
@@ -37,9 +37,7 @@
                 </section>
             </main>
             <footer> <!--Footern är längst ner på sidan och har oftast kontakt information-->
-                <article> <!--En separat bit med text-->
-                    <h2>Kontakt info:</h2>
-                </article>
+                <p>Kontakt info:</p> <!--En rad text skriven i en paragraf, paragrafer är vanligaste sättet att skriva text på-->
                 <p>Robin Svensson</p>
                 <p>rosv06002@utb.vaxjo.se</p>
             </footer>

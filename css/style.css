@@ -1,199 +1,181 @@
 /*-------------------------------------------Generella Saker-------------------------------------------*/
 
-.wrapper {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
+.wrapper { /*Sätter en standard grid för alla sidor på hela webbsidan, gridden är uppdelad i header, main och footer**/
+    display: grid; /*Gör en grid till wrapper*/
+    grid-template-rows: auto auto auto; /*Delar upp griden i tre rader som alla är automatiskt skalade*/
+    grid-template-areas: /*Delar up gridden i 3 areas som heter "header", "main" och "footer"*/
     "header"
     "main"
     "footer";
-    max-width: 97vw;
+    max-width: 100vw; /*Gör så att bredden på gridden är 100% av bredden på den synliga ytan av webbsidan*/
 }
 
 h1 { /*Ändrar text storleken, ändrar färg och centrerar texten. Tar bort margin och lägger till padding*/
-    font-size: 70px;
-    padding: 10px;
-    text-align: center;
-    margin: 0;
-    color: rgb(175, 190, 1);
+    font-size: 70px; /*Ändrar storleken på texten till 70 pixlar*/
+    padding: 10px; /*Ger alla primära headers 10 pixlar padding för att ge lite utrymme*/
+    text-align: center; /*Gör så att texten hamnar i mitten av ytan*/
+    margin: 0; /*Tar bot all margin från headern eftersom den inte kommer användas*/
+    color: rgb(175, 190, 1); /*Ändrar färgen till en gulaktig färg med RGB värden*/
 }
 
 h2 { /*Modifierar alla h2 element med saker som textstorlek, färg och fontfamilj*/
-    font-size: 35px;
-    color: rgb(175, 190, 1);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px; /*Ändrar fontstorleken på alla sekundära headers till 35 pixlar*/
+    color: rgb(175, 190, 1); /*Gör så att alla sekundära headers har en gulaktig färg med ett RGB värde*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /*Gör så att sekundära headers har en specifik fontfamilj, funkar inte den första så prövar den nästa*/
 }
 
 header { /*Design av headern, höjden är det minimala som behövs för att få plats med allt innehåll*/
-    grid-area: header;
-    background-color: #555268;
-    height: min-content;
-    width: 97vw;
+    grid-area: header; /*Gör så att alla headers är del av grid arean "header" vilket är en del av wrapper's grid*/
+    background-color: #555268; /*Ändrar bakgrundsfärgen till en gråaktig färg av ett visst hexvärde*/
+    height: min-content; /*Gör så att höjden på alla headers är det minsta som behövs för att få plats med allt innehåll*/
+    width: 100%; /*Gör bredden till 100% av bredden på webbsidan*/
 }
 
 body { /*Tar bot margin på body och sätter ny färg*/
-    background-color: rgb(105, 100, 128);
-    margin: 0px;
+    background-color: rgb(105, 100, 128); /*Gör så att body får en viss grå färg med ett RGB värde*/
+    margin: 0px; /*Tar bort margin på body*/
 }
 
-main {
+main { /*Gör så att main är del av gridområdet "main"*/
     grid-area: main;
 }
 
 section { /*Ger alla seketioner en gridd och border samt andra modifieringar. Bordern blir rundad*/
-    display: grid;
-    text-align: center;
-    background-color: rgb(16, 1, 190);
-    margin: 30px;
-    padding: 20px;
-    border-style: solid;
-    border-width: 10px;
-    border-radius: 20px;
-    border-color: rgb(2, 0, 121);
+    display: grid; /*Ger sektioner en grid*/
+    text-align: center; /*Centrerar text i sektionen!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    background-color: rgb(16, 1, 190); /*Ändrar sektionernas bakgrunds färg till blå av ett vist RGB värde*/
+    margin: 20px; /*Ger sektioner en margin på 30 pixlar*/
+    padding: 10px; /*Ger sektioner en padding på 20 pixlar*/
+    border-style: solid; /*Ger sektioner en solid synlig border*/
+    border-width: 10px; /*Ändrar borderns bredd till 10 pixlar*/
+    border-radius: 20px; /*Rundar kanterna på bordern med 20 pixlar*/
+    border-color: rgb(2, 0, 121); /*Gör så att bordern har en blåaktig fär av RGB värde*/
 }
 
 p { /*Modifierar alla paragrafer*/
-    font-size: 25px;
-    padding: 10px;
-    color: rgb(175, 190, 1);
+    font-size: 25px; /*Ändrar font storleken på alla paragrafer till 25 pixlar*/
+    padding: 10px; /*Ger paragraferna en padding på 10 pixlar för ge lite utrymme mellan texten och andra saker*/
+    color: rgb(175, 190, 1); /*Gör så att färgen på texten blir gul av ett RGB värde*/
 }
 
 video { /*Gör så att alla videor har automatisk margin*/
-    margin: auto;
-    width: 640px;
-    height: 480px;
+    margin: auto; /*Gör så att margin på videor sätts automatiskt*/
+    width: 640px; /*Ställer in bredden på videor så att de är 640 pixlar*/
+    height: 480px; /*Ställer in höjden på videor så att de är 640 pixlar*/
 }
 
 img { /*Modifierar image med olika saker så att de till exempel är lika breda som 15% av den synliga bredden på sidan */
-    width: 15vw;
-    margin: auto;
-    border-style: solid;
-    border-width: 7px;
-    border-radius: 7px;
-    border-color: rgb(2, 0, 121)
+    width: 15vw; /*Gör så att bredden på biler blir 15% av bredden på den synliga ytan av webbsidan*/
+    margin: auto; /*Gör så att margin ställs in automatiskt*/
+    border-style: solid; /* Gör så att bordern blir synlig och solid*/
+    border-width: 7px; /*Ändrar borderns bredd till 7 pixlar*/
+    border-radius: 7px; /*Rundar kanterna på bordern med 7 pixlar*/
+    border-color: rgb(2, 0, 121) /*Säller in färgen på bordern till blå med ett specifikt RGB värde*/
 }
 
 table, tr, td, th { /*Ändrar hela tabellen med färger border m.m*/
-    border-style: solid;
-    border-width: 10px;
-    border-color: rgb(2, 0, 121);
-    font-size: 40px;
-    padding: 10px;
-    color: rgb(175, 190, 1);
+    border-style: solid; /*Gör bordern runt alla tables, table rows, table data och table header till solid och synlig*/
+    border-width: 10px; /*Ändrar bredden på denna border till 10 pixlar*/
+    border-color: rgb(2, 0, 121); /*Byter färgen på bordern till blå av ett specifikt RGB värdge*/
+    font-size: 40px; /*Ändrar font storleken till 40 pixlar*/
+    padding: 10px; /*Skapar en padding på 20 pixlar*/
+    color: rgb(175, 190, 1); /*Gör så att färgen på texten blir gul av ett RGB värde*/
 }
 
 table { /*Kollapsar alla borders så att de sitter ihop när de är jämte varandra och andra modifikationer*/
-    border-collapse: collapse;
-    margin: auto;
-    background-color: rgb(16, 1, 190);
+    border-collapse: collapse; /*Kollapserar alla borders som är jämte varandre så att de går ihop till en */
+    margin: auto; /*Gör så att margin ändras automatiskt*/
+    background-color: rgb(16, 1, 190); /*Ändrar bakgrundsfärgen till en blå färg av ett visst RGB värde*/
 }
 
 footer { /*Modifierar footer så att det bara har en border på övre sidan och andra saker*/
-    grid-area: footer;
-    background-color: rgb(16, 1, 190);
-    width: 100%;
-    height: min-content;
-    font-size: 40px;
-    border-top-width: 10px;
-    border-top-style: solid;
-    border-color: rgb(2, 0, 121);
-    margin-top: 30px;
-    padding: 10px;
+    grid-area: footer; /*Gör så att footern blir del av gridområdet "footer"*/
+    background-color: rgb(16, 1, 190); /*Ändrar bakgrundsfärgen till en blå färg av ett visst RGB värde*/
+    height: min-content; /*Gör så att footern är minsta möjliga storleken som får plats med allt inehåll*/
+    font-size: 40px; /*Ändrar font storleken till 40 pixlar*/
+    border-top-width: 10px; /*Gör så att bredden på övre sidan av bordern blir 10 pixlar bred*/
+    border-top-style: solid; /*Gör så att borden syns med en solid stil*/
+    border-color: rgb(2, 0, 121); /*Byter färgen på bordern till blå av ett specifikt RGB värdge*/
+    margin-top: 30px;/*Gör så att margin på översidan blir 30 pixlar bred*/
+    padding: 10px; /*Skapar en padding på 10 pixlar*/
 }
 
-/*-------------------------------------------Specifika Klasser-------------------------------------------*/
+/*-------------------------------------------Specifika Saker-------------------------------------------*/
 
 .countries-grid { /*Gör gridden för alla sektioner på sidorna med länder så att de organiseras i trespalt och alla har 1fraktion(33%) var*/
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: rgb(64, 52, 189);
-    border-color: rgb(42, 40, 129)
+    display: grid; /*Ger klassen "countries-grid" en grid*/
+    grid-template-columns: 1fr 1fr 1fr; /*Delar upp gridden i tre kolumner som alla är en tredjedel av gridden i bredd*/
+    background-color: rgb(64, 52, 189); /*Ändrar bakgrundsfärgen till en blåaktig färg av ett visst RGB värde*/
+    border-color: rgb(42, 40, 129) /*Byter färgen på bordern till blå av ett specifikt RGB värdge*/
 }
 
-.eu-grid { /*Delar in så att videon och informationen på EU sidan hamnar i tvåspalt*/
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: rgb(64, 52, 189);
-    border-color: rgb(42, 40, 129)
-}
-
-.countries-grid > figure { /*Ställer in varje individel sektion som inehåller information om länderna så att flaggan, titeln och texten får en passande fördelning*/
-    grid-template-rows: 30% 10% 60%;
-}
-
-.countries-grid > figure > h2 { /*Ändrar den andra saken i sektionerna om länderna(Rubriken)*/
-    margin: 0;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
-
-.countries-grid > figure > figcaption { /*Ändrar den tredje saken i sektionerna om länderna(Texten)*/
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+#eu-grid { /*Delar in så att videon och informationen på EU sidan hamnar i tvåspalt*/
+    display: grid; /*Ger id "eu-grid" en grid*/
+    grid-template-columns: 1fr 1fr; /*Delar upp gridden i två kolumner som alla är hälften av gridden i bredd*/
+    background-color: rgb(64, 52, 189); /*Ändrar bakgrundsfärgen till en blå färg av ett visst RGB värde*/
+    border-color: rgb(42, 40, 129) /*Byter färgen på bordern till blå av ett specifikt RGB värdge*/
 }
 
 tr:nth-child(odd) { /*Gör så att varanan rad i tabellen får en annan färg (zebrastriping)*/
-    background-color: rgb(12, 0, 139);
+    background-color: rgb(12, 0, 139); /*Ändrar bakgrundsfärgen till en blåaktig färg av ett visst RGB värde*/
 }
 
 ol > li { /*Ändrar varje li i den ordnade listan*/
-    list-style: inside;
-    color: rgb(175, 190, 1);
-    font-size: 40px;
+    color: rgb(175, 190, 1); /*Gör så att färgen på texten blir gul av ett RGB värde*/
+    font-size: 40px; /*Ändrar font storleken till 40 pixlar*/
 }
 
-#lista { /*Modiferar hela listen så att den blir horisontelt centrerad och bredden blir 30% av förälderns bredd*/
-    width: 30em;
-    margin-left: auto;
-    margin-right: auto;
+ol {
+    list-style-position: inside; /*Gör så att siffrorna håller sig ihop med texten*/
 }
 
-footer > p { /*Ger texten i footern en liten margin*/
+main > table + section:last-child { /*Modiferar sista sektionen på hela sidan vilket är den listan är i så att den blir horisontelt centrerad och bredden blir 30% av förälderns bredd*/
+    width: 30em; /*Gör så att bredden blir 2 gånger så stor som fontstorleken*/
+    margin-left: auto; /*Gör så att margin på vänster sida ändras automatiskt*/
+    margin-right: auto; /*Gör så att margin på höger sida ändras automatiskt*/
+}
+
+footer > p { /*Ger texten i footern en liten margin på 4 pixlar*/
     margin: 4px;
 }
 
 /*-------------------------------------------Navitgations Meny-------------------------------------------*/
 
-nav { /*Modifierar navigations menyn smått*/
+nav { /*Ändrar bakgrundsfärgen på nav till en gråaktig färg av ett visst hexvärde*/
     background-color: #5e5b74;
-    align-items: center;
 }
 
 nav ul { /*Tar bort punkerna i varje list element och gömmer menyn*/
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: none;
+    list-style-type: none; /*Tar bort punkterna i listan*/
+    margin: 0; /*Tar bort margin*/
+    padding: 0; /*Tar bort paddingen*/
+    display: none; /*Gömmer blocket*/
 }
 
 ul li { /*Modifierar listan i den kollapserbara menyn*/
-    color: rgb(175, 190, 1);
-    text-decoration: none;
-    display: block;
-    padding: 10px 20px;
-    font-size: 40px;
+    color: rgb(175, 190, 1); /*Gör så att färgen på texten blir gul av ett RGB värde*/
+    text-decoration: none; /*Tar bort understrykningen på länken*/
+    padding: 10px; /*Skapar en padding på 10 pixlar*/
+    font-size: 40px; /*Ändrar font storleken till 40 pixlar*/
 }
 
 a {
-    color: rgb(175, 190, 1);
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 40px;
+    color: rgb(175, 190, 1); /*Gör så att färgen på texten blir gul av ett RGB värde*/
+    text-decoration: none; /*Tar bort understrykningen på länken*/
+    padding: 10px; /*Skapar en padding på 10 pixlar*/
+    font-size: 40px; /*Ändrar font storleken till 40 pixlar*/
 }
 
 header > label { /*Modifierar designen på meny labeln till menyknappen. Bland annat så att muspekaren ändras när du har musen över den*/
-    display: block;
-    width: auto;
-    border: none;
-    font-size: 60px;
-    cursor: pointer;
-    background-color: #555268;
-    color: rgb(175, 190, 1);
-    text-align: center;
-    padding: 10px;
+    display: block; /*Visar blocket*/
+    width: auto; /*Ändrar bredden automatiskt*/
+    border: none; /*Tar bort bordern*/
+    font-size: 60px; /*Ändrar font storleken till 60 pixlar*/
+    cursor: pointer; /*Gör så att när du har musen ovanför menyknappen så blir det en pekare*/
+    background-color: #555268; /*Ändrar bakgrundsfärgen på header till en gråaktig färg av ett visst hexvärde*/
+    color: rgb(175, 190, 1); /*Gör så att färgen på texten blir gul av ett RGB värde*/
+    text-align: center; /*Gör så att texten hamnar i mitten*/
+    padding: 10px; /*Skapar en padding på 10 pixlar*/
 }
 
 #button-toggle { /*Gömmer checkboxen som bestämmer om den kollapserbara navigations menyn visas eller inte*/
@@ -206,40 +188,40 @@ header > label { /*Modifierar designen på meny labeln till menyknappen. Bland a
 
 /*Alla LoVe Focus HAte. Används bara till globala navigations menyn på denna webbsida*/
 a:link {
-    color: rgb(175, 190, 1);
+    color: rgb(175, 190, 1); /*Gör så att färgen på texten blir gul av ett RGB värde*/
 }
 
 a:visited {
-    color: rgb(190, 155, 1)
+    color: rgb(190, 155, 1); /*Gör så att färgen på texten blir orange av ett RGB värde*/
 }
 
 a:focus, a:hover {
-    color: rgb(131, 143, 0);
+    color: rgb(131, 143, 0); /*Gör så att färgen på texten blir gulbrun av ett RGB värde*/
 }
 
 a:active {
-    color: rgb(100, 109, 0);
+    color: rgb(100, 109, 0); /*Gör så att färgen på texten blir gulbrun av ett RGB värde*/
 }
 
 /*-------------------------------------------Image Map-------------------------------------------*/
 
 #map-image {/*tar bort bordern och ställer en fast på imagemappen så att de inte påverkar klickytan.*/
-    border-width: 0;
-    margin: auto;
-    width: 900px;
+    border-width: 0; /*Tar bort border på imagemappen*/
+    margin: auto; /*Gör så att margin ändras automatiskt*/
+    width: 900px; /*Ändrar bredden till 900 pixlar*/
 }
 
 #map-border { /*Sätter stilen på sektinen som används för att ge imagemappen en border utan att störa klickytan*/
-    width: 900px;
-    padding: 0;
-    margin: auto;
+    width: 900px; /*Ändrar bredden till 900 pixlar*/
+    padding: 0; /*Tar bort paddingen*/
+    margin: auto; /*Gör så att margin ändras automatiskt*/
 }
 
 /*-------------------------------------------Forms-------------------------------------------*/
 
 form > fieldset > label { /*Ställer in stilen på alla labels i forms*/
-    font-size: 40px;
-    color: rgb(175, 190, 1);
+    font-size: 40px; /*Ändrar font storleken till 40 pixlar*/
+    color: rgb(175, 190, 1); /*Gör så att färgen på texten blir gul av ett RGB värde*/
 }
 
 input[type="radio"] ~ label { /*Sätter så att när du har musen på radioknapparnas labels så ändras gen till handen*/
@@ -247,20 +229,20 @@ input[type="radio"] ~ label { /*Sätter så att när du har musen på radioknapp
 }
 
 input[type="radio"]:checked + label { /*När en radioknapp är checkad ändras dens label så att texten blir grön och tjock så man ser vilket alternativ man har valt*/
-    color: green;
-    font-weight: bold;
+    color: green; /*Gör så att färgen på texten blir grön av ett RGB värde*/
+    font-weight: bold; /*Gör texten tjock*/
 }
 
 fieldset { /*Modifierar fieldset*/
-    width: 500px;
-    margin: auto;
-    border-radius: 20px;
-    color: rgb(175, 190, 1);
-    background-color: rgb(15, 1, 163);
+    width: 500px; /*Ändrar bredden till 500 pixlar*/
+    margin: auto; /*Gör så att margin ändras automatiskt*/
+    border-radius: 20px; /*Rundar kanterna på bordern med 20 pixlar*/
+    color: rgb(175, 190, 1); /*Gör så att färgen på texten blir gul av ett RGB värde*/
+    background-color: rgb(15, 1, 163); /*Ändrar bakgrundsfärgen till en blå färg av ett visst RGB värde*/
 }
 
 legend { /*Modifierar legend*/
-    color: rgb(175, 190, 1);
-    font-size: 40px;
-    font-weight: bold;
+    color: rgb(175, 190, 1); /*Gör så att färgen på texten blir gul av ett RGB värde*/
+    font-size: 40px; /*Ändrar font storleken till 40 pixlar*/
+    font-weight: bold; /*Gör texten tjock*/
 }
